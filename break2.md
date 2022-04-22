@@ -5,6 +5,7 @@
 [test link] (google.com)
 
 This is a smiley face [:
+](this should not be a link)
 
 [test](https://twitch.tv)
 
