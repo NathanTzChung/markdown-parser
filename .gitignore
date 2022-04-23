@@ -11,6 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
+# removed *.jar so the jar files can be used
 *.war
 *.nar
 *.ear
