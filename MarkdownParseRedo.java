@@ -12,7 +12,7 @@ public class MarkdownParseRedo{
         while(currentIndex < markdown.length()) {
             int openBracket = markdown.indexOf("[", currentIndex);
             //Check if the url is actually an image
-            if(openBracket > 0 && markdown.chartAt(openBracket - 1) == '1'){
+            if(openBracket > 0 && markdown.charAt(openBracket - 1) == '1'){
                 currentIndex++;
                 continue;
             }
