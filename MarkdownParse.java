@@ -22,9 +22,23 @@ public class MarkdownParse {
                                                                            
 
             int closeBracket = markdown.indexOf("](", openBracket);
+
+            // Check if the text portion closes before the URL
+            int openBracketCount = 0;
+            int closeBracketCount = 0;
+            for (int i = openBracket + 1; i < closeBracket; i++) {
+                if (markdown.charAt(i) == '[') openBracketCount++;
+                if (markdown.charAt(i) == ']') closeBracketCount++;
+            }
+            if (closeBracketCount > openBracketCount) {
+                currentIndex = closeBracket + 1;
+                continue;
+            }
+
+
             // Check if there is a new line between the brackets
             if (openBracket == -1 || closeBracket == -1) 
-                                                                                                                                        break;
+            break;
             String maybeLink = markdown.substring(openBracket, closeBracket);
             if (maybeLink.contains("\n")) {
                 currentIndex = closeBracket;
@@ -48,5 +62,6 @@ public class MarkdownParse {
         String content = Files.readString(fileName);
         ArrayList<String> links = getLinks(content);
 	    System.out.println(links);
+        System.out.println();
     }
 }
