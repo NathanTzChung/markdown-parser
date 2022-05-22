@@ -106,6 +106,33 @@ public class MarkdownParseTest {
     //     assertEquals(List.of(), MarkdownParse.getLinks(content));
     // }
 
+    // @Test
+    // public void testLab4Test1() throws IOException {
+    //     //Read stuff from file
+    //     Path fileName = Path.of("lab4-test1.md");
+    //     String content = Files.readString(fileName);
+    //     assertEquals(List.of("'google.com", "google.com", "ucsd.edu"), 
+    //     MarkdownParse.getLinks(content));
+    // }
+
+    // @Test
+    // public void testLab4Test2() throws IOException {
+    //     //Read stuff from file
+    //     Path fileName = Path.of("lab4-test2.md");
+    //     String content = Files.readString(fileName);
+    //     assertEquals(List.of("a.com", "a.com(())", "example.com"), 
+    //     MarkdownParse.getLinks(content));
+    // }
+
+    // @Test
+    // public void testLab4Test3() throws IOException {
+    //     //Read stuff from file
+    //     Path fileName = Path.of("lab4-test3.md");
+    //     String content = Files.readString(fileName);
+    //     assertEquals(List.of("https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule"), 
+    //     MarkdownParse.getLinks(content));
+    // }
+
     //Below are the tests with the absolute paths so I can run the tests on my end
     @Test
     public void addition() throws IOException {
