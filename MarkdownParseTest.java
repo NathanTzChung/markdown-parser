@@ -111,7 +111,7 @@ public class MarkdownParseTest {
         //Read stuff from file
         Path fileName = Path.of("lab4-test1.md");
         String content = Files.readString(fileName);
-        assertEquals(List.of("'google.com", "google.com", "ucsd.edu"), 
+        assertEquals(List.of("`google.com", "google.com", "ucsd.edu"), 
         MarkdownParse.getLinks(content));
     }
 
@@ -236,7 +236,7 @@ public class MarkdownParseTest {
     //     //Read stuff from file
     //     Path fileName = Path.of("C:/UCSD_2021-2022/Q3/CSE 15L/my_markdown_parser/markdown-parser/lab4-test1");
     //     String content = Files.readString(fileName);
-    //     assertEquals(List.of("'google.com", "google.com", "ucsd.edu"), 
+    //     assertEquals(List.of("`google.com", "google.com", "ucsd.edu"), 
     //     MarkdownParse.getLinks(content));
     // }
 
